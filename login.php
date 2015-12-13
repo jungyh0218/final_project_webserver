@@ -13,6 +13,7 @@
 	$data = $row[0];
 	if($data){
 		$outp = '{
+			"idx" : "'.$row[idx].'",
 			"status" : "OK",
 			 "id" : "'.$row[id].'",'.
 		' "password" : "'.$row[password].'"}'; 
