@@ -17,6 +17,7 @@
 		$data_row2 = mysqli_fetch_array($result2);
 		$ret = "[";
 		$ret .= "{";
+		$ret .= '"answer_id" : "'.$data_row[answer_id].'", ';
 		$ret .= '"question_id" :"'.$data_row[question_id].'",';
 		$ret .= '"title" : "'.stripslashes($data_row[title]).'",';
 		$ret .= '"content" :"'.stripslashes($data_row[content]).'",';
@@ -29,6 +30,7 @@
 			$result2 = mysqli_query($conn, $sql);
 			$data_row2 = mysqli_fetch_array($result2);
 			$ret .= ", {";
+			$ret .= '"answer_id" : "'.$data_row[answer_id].'", ';
 			$ret .= '"question_id" :"'.$data_row[question_id].'",';
 			$ret .= '"title" : "'.stripslashes($data_row[title]).'",';
 			$ret .= '"content" :"'.stripslashes($data_row[content]).'",';
