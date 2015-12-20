@@ -19,8 +19,8 @@
 		$ret = "[";
 		$ret .= "{";
 		$ret .= '"question_id" :"'.$data_row[question_id].'",';
-		$ret .= '"title" : "'.stripslashes($data_row[title]).'",';
-		$ret .= '"content" :"'.stripslashes($data_row[content]).'",';
+		$ret .= '"title" : "'.addslashes($data_row[title]).'",';
+		$ret .= '"content" :"'.addslashes($data_row[content]).'",';
 		$ret .= '"questioner" :"'.$data_row2[id].'",';
 		$ret .= '"upload_date" :"'.$data_row[upload_date].'",';
 		$ret .= '"vote" :"'.$data_row[vote].'"}';
@@ -32,8 +32,8 @@
 			$ret .= ", {";
 			
 			$ret .= '"question_id" :"'.$data_row[question_id].'",';
-			$ret .= '"title" : "'.stripslashes($data_row[title]).'",';
-			$ret .= '"content" :"'.stripslashes($data_row[content]).'",';
+			$ret .= '"title" : "'.addslashes($data_row[title]).'",';
+			$ret .= '"content" :"'.addslashes($data_row[content]).'",';
 			$ret .= '"questioner" :"'.$data_row2[id].'",';
 			$ret .= '"upload_date" :"'.$data_row[upload_date].'",';
 			$ret .= '"vote" :"'.$data_row[vote].'"}';

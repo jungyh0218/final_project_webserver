@@ -10,7 +10,7 @@
 	if($row_num){
 		echo '{"status" : "Duplicated"}';
 	}else{
-		$sql = "UPDATE `answer` SET `vote` = `vote` - 1 WHERE answer_id=".$_GET['answer_id'];
+		$sql = "UPDATE `answers` SET `vote` = `vote` - 1 WHERE answer_id=".$_GET['answer_id'];
 		$result = mysqli_query($conn, $sql);
 		$sql = "INSERT INTO `answer_vote` VALUES(".$_GET['answer_id'].", ".$_GET['memberIdx'].")";
 		$result = mysqli_query($conn, $sql);
